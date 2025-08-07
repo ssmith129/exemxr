@@ -20,21 +20,21 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 flex flex-col">
       {/* Main Content */}
-      <div className="flex-1 flex items-center justify-center px-4 py-8">
+      <div className="flex-1 flex items-center justify-center px-4 py-8 sm:px-6 lg:px-8">
         <div className="w-full max-w-md">
           {/* Logo and Header */}
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-2xl mb-6 shadow-lg">
-              <Shield className="w-8 h-8 text-white" />
+          <div className="text-center mb-6 sm:mb-8">
+            <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-primary rounded-2xl mb-4 sm:mb-6 shadow-lg">
+              <Shield className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
             </div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">ezEMRx</h1>
-            <h2 className="text-xl font-semibold text-gray-700 mb-1">Welcome back</h2>
-            <p className="text-gray-600">Sign in to access your Electronic Health Record system</p>
+            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">ezEMRx</h1>
+            <h2 className="text-lg sm:text-xl font-semibold text-gray-700 mb-1">Welcome back</h2>
+            <p className="text-sm sm:text-base text-gray-600 px-2">Sign in to access your Electronic Health Record system</p>
           </div>
 
           {/* Login Form */}
-          <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8">
-            <form onSubmit={handleSignIn} className="space-y-6">
+          <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 sm:p-8">
+            <form onSubmit={handleSignIn} className="space-y-5 sm:space-y-6">
               {/* Email Field */}
               <div className="space-y-2">
                 <Label htmlFor="email" className="text-sm font-medium text-gray-700">
@@ -48,7 +48,7 @@ export default function Index() {
                     placeholder="Enter your email address"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="pl-10 h-12 border-gray-200 focus:border-primary focus:ring-primary"
+                    className="pl-10 h-11 sm:h-12 border-gray-200 focus:border-primary focus:ring-primary"
                     required
                   />
                 </div>
@@ -75,7 +75,7 @@ export default function Index() {
                     placeholder="Enter your password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="pl-10 pr-10 h-12 border-gray-200 focus:border-primary focus:ring-primary"
+                    className="pl-10 pr-10 h-11 sm:h-12 border-gray-200 focus:border-primary focus:ring-primary"
                     required
                   />
                   <button
@@ -104,7 +104,7 @@ export default function Index() {
               {/* Sign In Button */}
               <Button 
                 type="submit" 
-                className="w-full h-12 bg-primary hover:bg-primary/90 text-white font-semibold text-base rounded-lg shadow-md hover:shadow-lg transition-all duration-200"
+                className="w-full h-11 sm:h-12 bg-primary hover:bg-primary/90 text-white font-semibold text-sm sm:text-base rounded-lg shadow-md hover:shadow-lg transition-all duration-200"
               >
                 Sign in to ezEMRx
               </Button>
