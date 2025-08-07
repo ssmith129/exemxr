@@ -20,7 +20,11 @@ export default function Placeholder({ title, description }: PlaceholderProps) {
             <h1 className="text-xl font-bold text-gray-900">ezEMRx</h1>
           </div>
           <Link to="/">
-            <Button variant="outline" size="sm" className="flex items-center gap-2">
+            <Button
+              variant="outline"
+              size="sm"
+              className="flex items-center gap-2"
+            >
               <ArrowLeft className="w-4 h-4" />
               Back to Login
             </Button>
@@ -37,7 +41,8 @@ export default function Placeholder({ title, description }: PlaceholderProps) {
           <h2 className="text-2xl font-bold text-gray-900 mb-2">{title}</h2>
           <p className="text-gray-600 mb-6">{description}</p>
           <p className="text-sm text-gray-500">
-            This page is a placeholder. Continue prompting to fill in the content for this section.
+            This page is a placeholder. Continue prompting to fill in the
+            content for this section.
           </p>
         </div>
       </div>

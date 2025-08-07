@@ -27,9 +27,15 @@ export default function Index() {
             <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-primary rounded-2xl mb-4 sm:mb-6 shadow-lg">
               <Shield className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
             </div>
-            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">ezEMRx</h1>
-            <h2 className="text-lg sm:text-xl font-semibold text-gray-700 mb-1">Welcome back</h2>
-            <p className="text-sm sm:text-base text-gray-600 px-2">Sign in to access your Electronic Health Record system</p>
+            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
+              ezEMRx
+            </h1>
+            <h2 className="text-lg sm:text-xl font-semibold text-gray-700 mb-1">
+              Welcome back
+            </h2>
+            <p className="text-sm sm:text-base text-gray-600 px-2">
+              Sign in to access your Electronic Health Record system
+            </p>
           </div>
 
           {/* Login Form */}
@@ -37,7 +43,10 @@ export default function Index() {
             <form onSubmit={handleSignIn} className="space-y-5 sm:space-y-6">
               {/* Email Field */}
               <div className="space-y-2">
-                <Label htmlFor="email" className="text-sm font-medium text-gray-700">
+                <Label
+                  htmlFor="email"
+                  className="text-sm font-medium text-gray-700"
+                >
                   Email Address
                 </Label>
                 <div className="relative">
@@ -57,7 +66,10 @@ export default function Index() {
               {/* Password Field */}
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <Label htmlFor="password" className="text-sm font-medium text-gray-700">
+                  <Label
+                    htmlFor="password"
+                    className="text-sm font-medium text-gray-700"
+                  >
                     Password
                   </Label>
                   <button
@@ -83,7 +95,11 @@ export default function Index() {
                     onClick={() => setShowPassword(!showPassword)}
                     className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
                   >
-                    {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                    {showPassword ? (
+                      <EyeOff className="w-5 h-5" />
+                    ) : (
+                      <Eye className="w-5 h-5" />
+                    )}
                   </button>
                 </div>
               </div>
@@ -93,17 +109,22 @@ export default function Index() {
                 <Checkbox
                   id="remember"
                   checked={rememberMe}
-                  onCheckedChange={(checked) => setRememberMe(checked as boolean)}
+                  onCheckedChange={(checked) =>
+                    setRememberMe(checked as boolean)
+                  }
                   className="border-gray-300"
                 />
-                <Label htmlFor="remember" className="text-sm text-gray-600 cursor-pointer">
+                <Label
+                  htmlFor="remember"
+                  className="text-sm text-gray-600 cursor-pointer"
+                >
                   Remember me for 30 days
                 </Label>
               </div>
 
               {/* Sign In Button */}
-              <Button 
-                type="submit" 
+              <Button
+                type="submit"
                 className="w-full h-11 sm:h-12 bg-primary hover:bg-primary/90 text-white font-semibold text-sm sm:text-base rounded-lg shadow-md hover:shadow-lg transition-all duration-200"
               >
                 Sign in to ezEMRx
@@ -131,7 +152,8 @@ export default function Index() {
                   HIPAA Compliant System
                 </h3>
                 <p className="text-sm text-green-700">
-                  This system complies with HIPAA regulations. All access is monitored and logged for security purposes.
+                  This system complies with HIPAA regulations. All access is
+                  monitored and logged for security purposes.
                 </p>
               </div>
             </div>
